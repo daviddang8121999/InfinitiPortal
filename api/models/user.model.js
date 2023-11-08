@@ -15,7 +15,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-}, { timestamps: true });
+    avatar:{
+        type: String,
+        default: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+    },
+},
+{ timestamps: true });
 
 const User = mongoose.model('User', userSchema);
 
